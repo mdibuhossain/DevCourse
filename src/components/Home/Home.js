@@ -1,9 +1,12 @@
 import React from 'react';
+import DisplayService from '../DisplayService/DisplayService';
+import HeroContainer from '../HeroContainer/HeroContainer';
 
 const Home = () => {
     return (
         <div>
-            <h1>Welcome Home</h1>
+            <HeroContainer />
+            <DisplayService />
         </div>
     );
 };
