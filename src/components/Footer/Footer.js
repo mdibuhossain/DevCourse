@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => {
     return (
         <div className="footer-container">
-            <div>
+            <div className="footer-icon">
                 <i class="fab fa-twitter"></i>&nbsp;&nbsp;
                 <i class="fab fa-facebook"></i>&nbsp;&nbsp;
                 <i class="fab fa-github"></i>

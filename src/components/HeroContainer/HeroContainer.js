@@ -8,10 +8,10 @@ const HeroContainer = () => {
     return (
         <Container className="my-5">
             <Row>
-                <Col>
+                <Col md={6} xs={12}>
                     <img className="img-fluid" src={heroImg} alt="hero img" />
                 </Col>
-                <Col className="d-flex flex-column justify-content-center">
+                <Col md={6} xs={12} className="d-flex flex-column justify-content-center align-item-center">
                     <div className="w-75">
                         <h1>Learn a new skill</h1>
                         <p>Build skills with DevCourse, certificates, and degrees online from world-class universities and companies.</p>
