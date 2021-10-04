@@ -15,6 +15,9 @@ function App() {
       <BrowserRouter>
         <Header></Header>
         <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
           <Route path="/home">
             <Home></Home>
           </Route>
