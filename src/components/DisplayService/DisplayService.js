@@ -18,7 +18,7 @@ const DisplayService = () => {
         <Container className="my-5">
             <div className="text-center">
                 <h1>Popular courses this month</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias optio, porro, ipsam saepe a molestiae deleniti labore similique beatae voluptates minus consectetur dolore dolorem magnam.</p>
+                <p>Break into a new field like information technology or data science. No prior experience necessary to get started.</p>
             </div>
             <div className="d-flex flex-wrap justify-content-center">
                 {

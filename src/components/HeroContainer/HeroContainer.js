@@ -6,7 +6,7 @@ import heroImg from '../../images/hero.jpg';
 
 const HeroContainer = () => {
     return (
-        <Container  className="my-5">
+        <Container className="my-5">
             <Row>
                 <Col>
                     <img className="img-fluid" src={heroImg} alt="hero img" />
@@ -14,7 +14,7 @@ const HeroContainer = () => {
                 <Col className="d-flex flex-column justify-content-center">
                     <div className="w-75">
                         <h1>Learn a new skill</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem suscipit reiciendis consequuntur ducimus dicta, nulla doloribus blanditiis beatae ut consectetur quidem provident architecto impedit fuga qui consequatur asperiores ipsum magni.</p>
+                        <p>Build skills with DevCourse, certificates, and degrees online from world-class universities and companies.</p>
                         <Row>
                             <Col>
                                 <h1 className="text-primary">168K</h1>
@@ -25,8 +25,8 @@ const HeroContainer = () => {
                                 <p>Students</p>
                             </Col>
                         </Row>
+                        <NavLink to="/services"><button className="btn btn-primary">Enroll now</button></NavLink>
                     </div>
-                    <NavLink to="/services"><button className="btn btn-primary">Enroll now</button></NavLink>
                 </Col>
             </Row>
         </Container >

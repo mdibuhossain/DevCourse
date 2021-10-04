@@ -12,7 +12,7 @@ const Header = () => {
                         <Nav className="mx-auto">
                             <Nav.Link as={Link} to="/home">Home</Nav.Link>
                             <Nav.Link as={Link} to="/services">Services</Nav.Link>
-                            <Nav.Link as={Link} to="/events">Events</Nav.Link>
+                            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
                             <Nav.Link as={Link} to="/about">About</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Home.css';
 import DisplayService from '../DisplayService/DisplayService';
 import HeroContainer from '../HeroContainer/HeroContainer';
 
