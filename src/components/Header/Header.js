@@ -1,25 +1,24 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div className="bg-light">
-            <Nav variant="tabs" defaultActiveKey="/home" className="justify-content-center">
-                <Nav.Item>
-                    <Nav.Link as={Link} to="/home" eventKey="link-1">Home</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link as={Link} to="/about" eventKey="link-2">About</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link as={Link} to="/services" eventKey="link-3">Services</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link as={Link} to="/events" eventKey="link-4">Events</Nav.Link>
-                </Nav.Item>
-            </Nav>
-        </div>
+        <>
+            <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+                <Container>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="mx-auto">
+                            <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                            <Nav.Link as={Link} to="/services">Services</Nav.Link>
+                            <Nav.Link as={Link} to="/events">Events</Nav.Link>
+                            <Nav.Link as={Link} to="/about">About</Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+        </>
     );
 };
 
