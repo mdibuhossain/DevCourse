@@ -12,7 +12,7 @@ const MainHero = () => {
                         <h1>For <span className="special-text">every student</span>,
                             every classroom.
                             Real results.</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio nam architecto rerum beatae alias? Repellat non tenetur odit quos perspiciatis voluptatum ipsam? Id, nulla officiis.</p>
+                        <p>There is no end to education. It is not that you read a book, pass an examination, and finish with education. The whole of life, from the moment you are born to the moment you die, is a process of learning.</p>
                     </div>
                 </Col>
                 <Col lg={6} sm={12}>

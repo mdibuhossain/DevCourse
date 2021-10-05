@@ -11,7 +11,10 @@ const Services = () => {
     }, []);
     return (
         <Container className="my-5">
-            <h1 className="text-center mb-5">All Courses</h1>
+            <div className="text-center mb-5">
+                <h1>All Courses</h1>
+                <span>Over 4,000 courses in topics like business analytics, graphic design, Python, and more.</span>
+            </div>
             <div className="d-flex flex-wrap justify-content-sm-around justify-content-center">
                 {
                     services.map(service => <Course key={service._id} service={service} />)

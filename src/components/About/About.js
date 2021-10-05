@@ -14,7 +14,7 @@ const About = () => {
                         </div>
                         <div>
                             <h3>Personalized learning</h3>
-                            <span>Students practice at their own pace, first filling in gaps in their understanding and then accelerating their learning.</span>
+                            <p>Students practice at their own pace, first filling in gaps in their understanding and then accelerating their learning.</p>
                         </div>
                     </div>
                     <div className="p-4 d-flex flex-column">
@@ -23,7 +23,7 @@ const About = () => {
                         </div>
                         <div>
                             <h3>Trusted content</h3>
-                            <span>Created by experts, DevCourse’s library of trusted practice and lessons covers math, science, and more. Always free for learners and teachers.</span>
+                            <p>Created by experts, DevCourse’s library of trusted practice and lessons covers math, science, and more. Always free for learners and teachers.</p>
                         </div>
                     </div>
                     <div className="p-4 d-flex flex-column">
@@ -32,7 +32,7 @@ const About = () => {
                         </div>
                         <div>
                             <h3>Tools to empower teachers</h3>
-                            <span>With DevCourse, teachers can identify gaps in their students’ understanding, tailor instruction, and meet the needs of every student.</span>
+                            <p>With DevCourse, teachers can identify gaps in their students’ understanding, tailor instruction, and meet the needs of every student.</p>
                         </div>
                     </div>
                 </div>

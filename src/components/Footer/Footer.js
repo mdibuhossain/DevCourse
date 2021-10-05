@@ -18,7 +18,7 @@ const Footer = () => {
                             <div className="footer-card mx-auto">
                                 <div>
                                     <h3>Newsletter</h3>
-                                    <p className="my-2 fw-bold">Subscribe Our Newsletter</p>
+                                    <p className="my-2 fw-bold text-light">Subscribe Our Newsletter</p>
                                     <input type="text" className="form-control p-2" placeholder="Email address" aria-label="Email address" />
                                     <button className="btn btn-outline-light w-100 p-2 mt-3">Submit</button>
                                     <small>
@@ -38,9 +38,9 @@ const Footer = () => {
                                     </ul>
                                 </div>
                                 <div className="footer-icon">
-                                    <i className="fab fa-twitter"></i>&nbsp;&nbsp;
-                                    <i className="fab fa-facebook"></i>&nbsp;&nbsp;
-                                    <i className="fab fa-github"></i>
+                                    <a target="_blank" rel="noreferrer" href="https://twitter.com/"><i className="fab fa-twitter"></i></a>&nbsp;&nbsp;
+                                    <a target="_blank" rel="noreferrer" href="https://www.facebook.com/JhankarMahbub"><i className="fab fa-facebook"></i></a>&nbsp;&nbsp;
+                                    <a target="_blank" rel="noreferrer" href="https://github.com/mdibuhossain"><i className="fab fa-github"></i></a>
                                 </div>
                                 <div className="Footer-logo mx-auto">
                                     <img src="./logo.png" alt="logo" />
@@ -50,7 +50,7 @@ const Footer = () => {
                         <Col xs={12}>
                             <div className="text-center mt-5">
                                 <hr />
-                                <p className="py-3">&copy;All right reserved by DevCourse, 2021</p>
+                                <p className="py-3 text-light">&copy;All right reserved by DevCourse, 2021</p>
                             </div>
                         </Col>
                     </Row>
