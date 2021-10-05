@@ -12,7 +12,7 @@ const Footer = () => {
                 </svg>
             </div>
             <div className="footer-inner">
-                <div className="container mx-auto">
+                <Container className="mx-auto">
                     <Row className="justify-content-center">
                         <Col>
                             <div className="footer-card mx-auto">
@@ -28,7 +28,7 @@ const Footer = () => {
                             </div>
                         </Col>
                         <Col>
-                            <div>
+                            <div className="text-center">
                                 <div>
                                     <ul className="footer-nav">
                                         <li><NavLink to='/home'>Home</NavLink></li>
@@ -42,7 +42,7 @@ const Footer = () => {
                                     <i className="fab fa-facebook"></i>&nbsp;&nbsp;
                                     <i className="fab fa-github"></i>
                                 </div>
-                                <div className="Footer-logo">
+                                <div className="Footer-logo mx-auto">
                                     <img src="./logo.png" alt="logo" />
                                 </div>
                             </div>
@@ -54,7 +54,7 @@ const Footer = () => {
                             </div>
                         </Col>
                     </Row>
-                </div>
+                </Container>
             </div>
         </div>
     );
