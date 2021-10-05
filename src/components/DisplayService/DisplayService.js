@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { CardGroup, Container, } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Course from '../Course/Course';
 
 const DisplayService = () => {
