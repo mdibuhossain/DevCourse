@@ -17,7 +17,7 @@ const Course = (props) => {
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>{about}</Card.Text>
-                        <span className="bg-primary text-white px-3 py-1 rounded">{fee}</span>
+                        <span className="special-bg text-white px-3 py-1 rounded">{fee}</span>
                     </Card.Body>
                     <Card.Footer>
                         <Row>

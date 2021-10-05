@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <>
             <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#1360EF" }} variant="dark" className="fw-bold">
-                <Container className="flex justify-content-between">
+                <Container>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Brand><img src="./logo.png" /></Navbar.Brand>
                     <Navbar.Collapse id="responsive-navbar-nav">
