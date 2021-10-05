@@ -17,7 +17,10 @@ const Course = (props) => {
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>{about}</Card.Text>
-                        <span className="special-bg text-white px-3 py-1 rounded">{fee}</span>
+                        <div className="d-flex justify-content-between">
+                            <span className="border bg-light px-3 py-1 rounded">{fee}</span>
+                            <button className="special-bg text-white px-3 py-1 border-0 rounded">Enroll</button>
+                        </div>
                     </Card.Body>
                     <Card.Footer>
                         <Row>
