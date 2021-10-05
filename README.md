@@ -1,2 +1,2 @@
-# [LiveSite](https://devcourse.netlify.app/)
+# [DevCourse](https://devcourse.netlify.app/)
 ## Educational Site
