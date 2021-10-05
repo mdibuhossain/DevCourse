@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-                <Container>
+            <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#1360EF" }} variant="dark" className="fw-bold">
+                <Container className="flex justify-content-between">
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Brand><img src="./logo.png" /></Navbar.Brand>
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="mx-auto">
+                        <Nav className="fs-5">
                             <Nav.Link as={Link} to="/home">Home</Nav.Link>
                             <Nav.Link as={Link} to="/services">Services</Nav.Link>
                             <Nav.Link as={Link} to="/contact">Contact</Nav.Link>

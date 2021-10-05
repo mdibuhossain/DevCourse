@@ -1,12 +1,49 @@
+.footer-container *{
+    margin: 0;
+    padding: 0;
+}
 .footer-container{
+    margin-top: auto;
+    width: 100%;
+    font-size: 16px;
+}
+.footer-inner{
     margin-top: auto;
     display: block;
     width: 100%;
-    padding: 25px 0;
-    background-color: #1f1f1f;
+    background-color: #1360EF;
     color: white;
-    text-align: center;
+    /* text-align: center; */
+}
+.footer-nav{
+    margin: auto;
+}
+.footer-nav li{
+    list-style: none;
+    margin: 8px 0;
+}
+.footer-nav li *{
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+}
+.footer-card{
+    width: 280px;
+    padding: 20px;
+    background-color: #2A6CE3;
+    border-radius: 10px;
+}
+.footer-card *{
+    width: 100%;
 }
 .footer-icon{
     font-size: 1.5rem;
+}
+.Footer-logo{
+    width: 250px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+.Footer-logo img{
+    width: 100%;
 }

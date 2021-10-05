@@ -9,8 +9,8 @@ const Contact = () => {
                 <h1 className="text-center mb-5">Contact Us</h1>
                 <form className="row g-3">
                     <div className="col-12">
-                        <div class="row g-3">
-                            <div class="col">
+                        <div className="row g-3">
+                            <div className="col">
                                 <input type="text" className="form-control" placeholder="First name" aria-label="First name" />
                             </div>
                             <div className="col">
@@ -18,8 +18,8 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a messages here" id="floatingTextarea2" style={{ height: "100px" }}></textarea>
+                    <div className="form-floating">
+                        <textarea className="form-control" placeholder="Leave a messages here" id="floatingTextarea2" style={{ height: "100px" }}></textarea>
                         <label for="floatingTextarea2">Comments</label>
                     </div>
                     <div className="col-12">
