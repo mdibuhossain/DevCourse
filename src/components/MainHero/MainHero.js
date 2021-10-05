@@ -5,7 +5,7 @@ import mainHeroImg from '../../images/mainHero.png';
 
 const MainHero = () => {
     return (
-        <Container>
+        <Container className="my-5">
             <Row className="align-items-center justify-content-center flex-column-reverse flex-lg-row">
                 <Col lg={6} sm={12}>
                     <div>
