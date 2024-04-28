@@ -15,9 +15,60 @@ enum RoleType {
 model User {
   id        Int      @id @default(autoincrement())
   name      String?
-  username  String   @unique
+  email     String   @unique
   password  String
   role      RoleType @default(USER)
+  walletId  Int
   updatedAt DateTime @updatedAt
   createdAt DateTime @default(now())
+  wallet    Wallet   @relation(fields: [walletId], references: [id])
+  Coupon    Coupon[]
+}
+
+model Wallet {
+  id          Int           @id @default(autoincrement())
+  balance     Float
+  User        User[]
+  updatedAt   DateTime      @updatedAt
+  createdAt   DateTime      @default(now())
+  Transaction Transaction[]
+}
+
+model Transaction {
+  id        Int      @id @default(autoincrement())
+  amount    Float
+  type      String
+  walletId  Int
+  courseId  Int
+  couponId  Int?
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+  course    Course   @relation(fields: [courseId], references: [id])
+  coupon    Coupon?  @relation(fields: [couponId], references: [id])
+  wallet    Wallet   @relation(fields: [walletId], references: [id])
+}
+
+model Coupon {
+  id          Int           @id @default(autoincrement())
+  code        String        @unique
+  discount    Float
+  count       Int           @default(0)
+  userId      Int
+  updatedAt   DateTime      @updatedAt
+  createdAt   DateTime      @default(now())
+  user        User          @relation(fields: [userId], references: [id])
+  Transaction Transaction[]
+}
+
+model Course {
+  id                Int           @id @default(autoincrement())
+  title             String
+  description       String
+  img               String
+  isCouponAvailable Boolean       @default(false)
+  isVisible         Boolean       @default(true)
+  price             Float
+  updatedAt         DateTime      @updatedAt
+  createdAt         DateTime      @default(now())
+  Transaction       Transaction[]
 }
