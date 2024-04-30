@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import express from "express";
 import { fileURLToPath } from "url";
 import cookieParser from "cookie-parser";
+import authRouter from "./routes/auth.route.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -26,6 +27,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
   res.send("DevCourse server is ready");
 });
+
+app.use("/api/auth", authRouter);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
