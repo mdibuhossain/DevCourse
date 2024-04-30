@@ -3,14 +3,15 @@ import "./Home.css";
 import DisplayService from "../DisplayService/DisplayService";
 import MiddleHero from "../MiddleHero/MiddleHero";
 import MainHero from "../MainHero/MainHero";
+import PageLayout from "../../pages/dashboard/PageLayout";
 
 const Home = () => {
   return (
-    <div>
+    <PageLayout>
       <MainHero />
       <MiddleHero />
       <DisplayService />
-    </div>
+    </PageLayout>
   );
 };
 

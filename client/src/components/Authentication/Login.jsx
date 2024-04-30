@@ -5,6 +5,7 @@ import useAuth from "../../hooks/useAuth";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/auth.context";
 import { Link } from "react-router-dom";
+import PageLayout from "../../pages/dashboard/PageLayout";
 
 function Login() {
   const { login, authLoading } = useContext(AuthContext);
@@ -20,35 +21,37 @@ function Login() {
   };
 
   return (
-    <Container className="my-5">
-      <h3 className="text-center">Please Login</h3>
-      <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control name="email" type="email" placeholder="Enter email" />
-        </Form.Group>
+    <PageLayout>
+      <Container className="my-5">
+        <h3 className="text-center">Please Login</h3>
+        <Form onSubmit={handleSubmit}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control name="email" type="email" placeholder="Enter email" />
+          </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            name="password"
-            type="password"
-            placeholder="Password"
-          />
-        </Form.Group>
-        <p>
-          Dont't have an account? <Link to="/register">Register</Link>
-        </p>
-        <Button variant="primary" type="submit">
-          {
-            authLoading ?
-              <div class="spinner-border spinner-border-sm" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div> : 'Sign in'
-          }
-        </Button>
-      </Form>
-    </Container>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              name="password"
+              type="password"
+              placeholder="Password"
+            />
+          </Form.Group>
+          <p>
+            Dont't have an account? <Link to="/register">Register</Link>
+          </p>
+          <Button variant="primary" type="submit">
+            {
+              authLoading ?
+                <div class="spinner-border spinner-border-sm" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div> : 'Sign in'
+            }
+          </Button>
+        </Form>
+      </Container>
+    </PageLayout>
   );
 }
 

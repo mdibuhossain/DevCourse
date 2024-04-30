@@ -10,13 +10,13 @@ import Contact from "./components/Contact/Contact";
 import Login from "./components/Authentication/Login";
 import Register from "./components/Authentication/Register";
 import { AuthProvider } from "./contexts/auth.context";
+import DashboardLayout from "./pages/dashboard/DashboardLayout";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <AuthProvider>
-          <Header />
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
@@ -25,9 +25,9 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/dashboard" element={<DashboardLayout />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-          <Footer />
         </AuthProvider>
       </BrowserRouter>
     </div>

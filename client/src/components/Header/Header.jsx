@@ -30,8 +30,6 @@ const Header = () => {
               <li><Link to="contact" class="link-light fw-bold fs-5 text-decoration-none me-3">Contact</Link></li>
             </ul>
 
-
-
             {
               user ?
                 <>
@@ -45,6 +43,7 @@ const Header = () => {
                       <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle" />
                     </a>
                     <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                      <li><p class="dropdown-item">{user?.name}</p></li>
                       <li><Link class="dropdown-item" to="/dashboard">Dashboard</Link></li>
                       <li>
                         <hr class="dropdown-divider" />

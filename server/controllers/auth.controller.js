@@ -29,9 +29,9 @@ export class AuthController {
         httpOnly: true,
         maxAge: 1000 * 60 * 60 * 24 * 7,
       });
-      res.status(200).json({ message: "success" });
+      return res.status(200).json({ message: "success" });
     } catch (error) {
-      res.status(500).json({ message: error.message });
+      return res.status(500).json({ message: error.message });
     }
   }
 
@@ -71,32 +71,32 @@ export class AuthController {
         httpOnly: true,
         maxAge: 1000 * 60 * 60 * 24 * 7,
       });
-      res.status(201).json({ message: "success" });
+      return res.status(201).json({ message: "success" });
     } catch (error) {
-      res.status(500).json({ message: error.message });
+      return res.status(500).json({ message: error.message });
     }
   }
 
   static async logout(req, res) {
     try {
       res.clearCookie("jwt");
-      res.status(200).json({ message: "success" });
+      return res.status(200).json({ message: "success" });
     } catch (error) {
-      res.status(500).json({ message: error.message });
+      return res.status(500).json({ message: error.message });
     }
   }
 
   static async updateUser(req, res) {
     try {
     } catch (error) {
-      res.status(500).json({ message: error.message });
+      return res.status(500).json({ message: error.message });
     }
   }
 
   static async deleteUser(req, res) {
     try {
     } catch (error) {
-      res.status(500).json({ message: error.message });
+      return res.status(500).json({ message: error.message });
     }
   }
 
@@ -119,9 +119,9 @@ export class AuthController {
           },
         },
       });
-      res.status(200).json(user);
+      return res.status(200).json(user);
     } catch (error) {
-      res.status(500).json({ message: error.message });
+      return res.status(500).json({ message: error.message });
     }
   }
 }
