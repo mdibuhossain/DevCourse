@@ -111,7 +111,12 @@ export class AuthController {
           name: true,
           email: true,
           role: true,
-          walletId: true,
+          wallet: {
+            select: {
+              id: true,
+              balance: true,
+            },
+          },
         },
       });
       res.status(200).json(user);
