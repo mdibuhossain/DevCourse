@@ -24,39 +24,96 @@ export class TransactionController {
                     id: res.user.walletId,
                 },
             });
-            if (payload.courseId) {
+            let finalPrice = findCourse.price;
+            let transaction = null;
+            if (payload.couponCode) {
                 const findCoupon = await prisma.coupon.findUnique({
+                    where: { code: payload.couponCode },
+                    include: {
+                        id: true,
+                        balance: true,
+                        discount: true,
+                        expiryDate: true,
+                        user: {
+                            include: {
+                                wallet: true,
+                            },
+                        },
+                    }
+                });
+                let discountAmount = findCoupon.discount / 100 * findCourse.price;
+                finalPrice -= discountAmount;
+                if (findCoupon.expiryDate < new Date()) {
+                    return res.status(400).json({ message: 'Coupon has expired' });
+                }
+                if (findWallet.balance < finalPrice) {
+                    return res.status(400).json({ message: 'Insufficient balance' });
+                }
+                await prisma.coupon.update({
                     where: {
-                        code: payload.couponId,
+                        id: findCoupon.id,
+                    },
+                    data: {
+                        count: {
+                            increment: 1,
+                        },
+                    },
+                });
+                await prisma.wallet.update({
+                    where: {
+                        id: findCoupon.user.wallet.id,
+                    },
+                    data: {
+                        balance: {
+                            increment: discountAmount,
+                        },
+                    },
+                });
+                transaction = await prisma.transaction.create({
+                    data: {
+                        courseId: findCourse.id,
+                        walletId: findWallet.id,
+                        couponId: findCoupon.id,
+                        amount: finalPrice,
+                    },
+                    include: {
+                        id: true,
+                        coupon: true,
+                        course: true,
+                        wallet: true,
+                        amount: true,
+                        createdAt: true,
+                        updatedAt: true,
+                    },
+                });
+            } else {
+                transaction = await prisma.transaction.create({
+                    data: {
+                        courseId: findCourse.id,
+                        walletId: findWallet.id,
+                        amount: finalPrice,
+                    },
+                    include: {
+                        id: true,
+                        course: true,
+                        wallet: true,
+                        amount: true,
+                        createdAt: true,
+                        updatedAt: true,
                     },
                 });
             }
-            const transaction = await prisma.transaction.create({
+            await prisma.wallet.update({
+                where: {
+                    id: findWallet.id,
+                },
                 data: {
-                    amount: payload.amount,
-                    type: payload.type,
-                    walletId: payload.walletId,
+                    balance: {
+                        decrement: finalPrice,
+                    },
                 },
             });
             return res.status(201).json(transaction);
-        } catch (error) {
-            return res.status(500).json({ message: error.message });
-        }
-    }
-    static async updateTransaction(req, res) {
-        const payload = req.body;
-        try {
-            const transaction = await prisma.transaction.update({
-                where: {
-                    id: parseInt(req.params.id),
-                },
-                data: {
-                    amount: payload.amount,
-                    type: payload.type,
-                    walletId: payload.walletId,
-                },
-            });
-            return res.status(200).json(transaction);
         } catch (error) {
             return res.status(500).json({ message: error.message });
         }

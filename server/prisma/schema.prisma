@@ -18,7 +18,7 @@ model User {
   email     String   @unique
   password  String
   role      RoleType @default(USER)
-  walletId  Int
+  walletId  Int      @unique
   updatedAt DateTime @updatedAt
   createdAt DateTime @default(now())
   wallet    Wallet   @relation(fields: [walletId], references: [id])
@@ -28,7 +28,7 @@ model User {
 model Wallet {
   id          Int           @id @default(autoincrement())
   balance     Float
-  User        User[]
+  User        User?
   updatedAt   DateTime      @updatedAt
   createdAt   DateTime      @default(now())
   Transaction Transaction[]

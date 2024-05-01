@@ -56,4 +56,23 @@ export class CouponController {
             return res.status(500).json({ message: error.message });
         }
     }
+    static async checkValidCoupon(req, res) {
+        const payload = req.body;
+        try {
+            const coupon = await prisma.coupon.findUnique({
+                where: {
+                    code: payload.code,
+                },
+            });
+            if (!coupon) {
+                return res.status(400).json({ message: 'Invalid Coupon' });
+            }
+            if (coupon.expiryDate < new Date()) {
+                return res.status(400).json({ message: 'Coupon has expired' });
+            }
+            return res.status(200).json(coupon);
+        } catch (error) {
+            return res.status(500).json({ message: error.message });
+        }
+    }
 }
