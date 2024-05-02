@@ -25,7 +25,9 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/dashboard" element={<DashboardLayout />} />
+            <Route path="/dashboard" element={<DashboardLayout />}>
+              <Route index element={<Home />} />
+            </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>

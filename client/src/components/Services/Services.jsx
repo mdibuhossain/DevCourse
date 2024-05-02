@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import Course from '../Course/Course';
-import PageLayout from '../../pages/dashboard/PageLayout';
+import PageLayout from '../../pages/PageLayout';
 
 const Services = () => {
     const [services, setServices] = useState([]);

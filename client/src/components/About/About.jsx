@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css';
 import { Container } from 'react-bootstrap';
-import PageLayout from '../../pages/dashboard/PageLayout';
+import PageLayout from '../../pages/PageLayout';
 
 const About = () => {
     return (

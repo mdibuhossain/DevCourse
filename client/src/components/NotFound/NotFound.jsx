@@ -2,7 +2,7 @@ import React from 'react';
 import './NotFound.css';
 import img404 from '../../images/404.jpg';
 import { NavLink } from 'react-router-dom';
-import PageLayout from '../../pages/dashboard/PageLayout';
+import PageLayout from '../../pages/PageLayout';
 
 const NotFound = () => {
     return (

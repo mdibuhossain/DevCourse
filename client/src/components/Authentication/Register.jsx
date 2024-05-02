@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/auth.context";
-import PageLayout from "../../pages/dashboard/PageLayout";
+import PageLayout from "../../pages/PageLayout";
 
 function Register() {
   const { register, authLoading } = useContext(AuthContext);

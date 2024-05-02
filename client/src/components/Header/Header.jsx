@@ -24,10 +24,10 @@ const Header = () => {
             </Link>
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><Link to="home" class="link-light fw-bold fs-5 text-decoration-none me-3">Home</Link></li>
-              <li><Link to="services" class="link-light fw-bold fs-5 text-decoration-none me-3">Courses</Link></li>
-              <li><Link to="about" class="link-light fw-bold fs-5 text-decoration-none me-3">About</Link></li>
-              <li><Link to="contact" class="link-light fw-bold fs-5 text-decoration-none me-3">Contact</Link></li>
+              <li><Link to="/home" class="link-light fw-bold fs-5 text-decoration-none me-3">Home</Link></li>
+              <li><Link to="/services" class="link-light fw-bold fs-5 text-decoration-none me-3">Courses</Link></li>
+              <li><Link to="/about" class="link-light fw-bold fs-5 text-decoration-none me-3">About</Link></li>
+              <li><Link to="/contact" class="link-light fw-bold fs-5 text-decoration-none me-3">Contact</Link></li>
             </ul>
 
             {

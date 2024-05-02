@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import './Contact.css';
-import PageLayout from '../../pages/dashboard/PageLayout';
+import PageLayout from '../../pages/PageLayout';
 
 const Contact = () => {
     return (

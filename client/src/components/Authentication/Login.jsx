@@ -5,7 +5,7 @@ import useAuth from "../../hooks/useAuth";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/auth.context";
 import { Link } from "react-router-dom";
-import PageLayout from "../../pages/dashboard/PageLayout";
+import PageLayout from "../../pages/PageLayout";
 
 function Login() {
   const { login, authLoading } = useContext(AuthContext);
