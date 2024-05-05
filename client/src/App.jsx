@@ -11,6 +11,8 @@ import Login from "./components/Authentication/Login";
 import Register from "./components/Authentication/Register";
 import { AuthProvider } from "./contexts/auth.context";
 import DashboardLayout from "./pages/dashboard/DashboardLayout";
+import AllCourses from "./pages/dashboard/AllCourses";
+import AddNewCourse from "./pages/dashboard/AddNewCourse";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/dashboard" element={<DashboardLayout />}>
               <Route index element={<Home />} />
+              <Route path="add-courses" element={<AddNewCourse />} />
+              <Route path="all-courses" element={<AllCourses />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>

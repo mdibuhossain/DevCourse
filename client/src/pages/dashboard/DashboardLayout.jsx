@@ -41,8 +41,8 @@ const DashboardLayout = ({ children }) => {
                         <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                             <div className="bg-white py-2 collapse-inner rounded">
                                 {/* <h6 className="collapse-header">Custom Components:</h6> */}
-                                <Link className="collapse-item" to="buttons.html">Add new course</Link>
-                                <Link className="collapse-item" to="cards.html">Course list</Link>
+                                <Link className="collapse-item" to="add-courses">Add new course</Link>
+                                <Link className="collapse-item" to="all-courses">Course list</Link>
                                 <Link className="collapse-item" to="cards.html">Revenue from courses</Link>
                             </div>
                         </div>
@@ -157,10 +157,7 @@ const DashboardLayout = ({ children }) => {
                 </div>
 
             </div>
-
-            <Link className="scroll-to-top rounded" to="#page-top">
-                <i className="fas fa-angle-up"></i>
-            </Link>
+            
         </>
     );
 }

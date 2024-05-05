@@ -1,7 +1,10 @@
+import prisma from "../config/db.config.js";
+
 export class CourseController {
     static async getAllCourses(req, res) {
         try {
             const courses = await prisma.course.findMany();
+            console.log(courses)
             return res.status(200).json(courses);
         } catch (error) {
             return res.status(500).json({ message: error.message });
@@ -20,7 +23,8 @@ export class CourseController {
         }
     }
     static async createCourse(req, res) {
-        const payload = req.body;
+        let payload = req.body;
+        console.log(payload);
         try {
             const course = await prisma.course.create({
                 data: {
